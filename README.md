@@ -1,7 +1,7 @@
 # NapCat-1Panel
 在1Panel面板运行NapCat
 <div align="center">
-  <img src="https://cdn.wanli.icu/Snipaste_2024-09-10_01-20-13.png?e=1725903007&token=-OaWqvhw6VUi5aqDe_VjvExatymWXEXdbBlMTPpr:MbBgBuSCERuvm5sm9kW6JL2BzlE=" alt="NapCatQQ" width="640" height="320" />
+  <img src="https://cdn.wanli.icu/Snipaste_2024-09-10_01-20-13.png?e=1725903007&token=-OaWqvhw6VUi5aqDe_VjvExatymWXEXdbBlMTPpr:MbBgBuSCERuvm5sm9kW6JL2BzlE="/>
 </div>
 
 ---
