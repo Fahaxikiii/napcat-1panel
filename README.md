@@ -39,3 +39,9 @@ rm -rf /opt/1panel/resource/apps/local/main.zip
 ```
 
 然后应用商店刷新本地应用即可。
+
+---
+## 配置图
+<div align="center">
+  <img src="https://cdn.wanli.icu/Snipaste_2024-09-10_01-20-31.png?e=1725903211&token=-OaWqvhw6VUi5aqDe_VjvExatymWXEXdbBlMTPpr:PllZcPZYWiW14j4hwPF66eg5D7M="/>
+</div>
