@@ -1,0 +1,51 @@
+additionalProperties:
+  formFields:
+    - default: 02:42:ac:11:00:99
+      edit: true
+      envKey: MAC_ADDRESS
+      labelEn: mac_address
+      labelZh: mac地址
+      required: false
+      type: text
+    - default: 0
+      edit: true
+      envKey: NAPCAT_UID
+      labelEn: NAPCAT_UID
+      labelZh: NAPCAT用户ID
+      required: true
+      type: number
+    - default: 0
+      edit: true
+      envKey: NAPCAT_GID
+      labelEn: NAPCAT_GID
+      labelZh: NAPCAT组ID
+      required: true
+      type: number
+    - default: 1234567890
+      edit: true
+      envKey: QQ_ACCOUNT
+      labelEn: QQ_ACCOUNT
+      labelZh: 机器人账号
+      required: false
+      type: text
+    - default: ./data/QQ
+      edit: true
+      envKey: QQ_PATH
+      labelEn: QQ_setting_path
+      labelZh: QQ配置路径
+      required: false
+      type: text
+    - default: ./data/config
+      edit: true
+      envKey: CONFIG_PATH
+      labelEn: NapCat_config_path
+      labelZh: NapCat配置路径
+      required: true
+      type: text
+    - default: ./data/log
+      edit: true
+      envKey: LOG_PATH
+      labelEn: NapCat_log_path
+      labelZh: NapCat日志路径
+      required: false
+      type: text
