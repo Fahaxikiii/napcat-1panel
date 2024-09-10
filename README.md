@@ -24,7 +24,6 @@ if [ $? -eq 0 ]; then
     rm -rf $install_dir/1panel/resource/apps/local/napcat
     mv $install_dir/1panel/resource/apps/local/napcat-temp $install_dir/1panel/resource/apps/local/napcat
 else
-    echo "克隆失败"
     exit 1
 fi
 
