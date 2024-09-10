@@ -12,23 +12,11 @@
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-#!/bin/sh
-
-install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
-
-rm -rf $install_dir/1panel/resource/apps/local/napcat-temp
-
-git clone -b napcat https://mirror.ghproxy.com/https://github.com/Fahaxikiii/napcat-1panel.git "$install_dir/1panel/resource/apps/local/napcat-temp"
-
-if [ $? -eq 0 ]; then
-    rm -rf $install_dir/1panel/resource/apps/local/napcat
-    mv $install_dir/1panel/resource/apps/local/napcat-temp $install_dir/1panel/resource/apps/local/napcat
-else
-    exit 1
-fi
-
+bash <(wget -qO- https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
 ```
-
+```shell
+bash <(curl -sS- https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
+```
 然后应用商店刷新本地应用即可。
 
 #### 2 使用压缩包方式获取应用
