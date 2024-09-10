@@ -16,7 +16,9 @@
 
 install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
 
-git clone -b napcat https://github.com/Fahaxikiii/napcat-1panel.git "$install_dir/1panel/resource/apps/local/napcat-temp"
+rm -rf $install_dir/1panel/resource/apps/local/napcat-temp
+
+git clone -b napcat https://mirror.ghproxy.com/https://github.com/Fahaxikiii/napcat-1panel.git "$install_dir/1panel/resource/apps/local/napcat-temp"
 
 if [ $? -eq 0 ]; then
     rm -rf $install_dir/1panel/resource/apps/local/napcat
