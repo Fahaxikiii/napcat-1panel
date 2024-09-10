@@ -1,0 +1,87 @@
+additionalProperties:
+  formFields:
+    - default: 1234567890
+      edit: true
+      envKey: QQ_ACCOUNT
+      labelEn: QQ_ACCOUNT
+      labelZh: 机器人账号
+      required: false
+      type: text
+    - default: 0.0.0.0
+      edit: true
+      envKey: NAPCAT_HOST
+      labelEn: NAPCAT_HOST
+      labelZh: WebUI监听地址
+      required: true
+      type: text
+    - default: 6099
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: NAPCAT_PORT
+      labelZh: WebUI端口
+      required: true
+      type: number
+      rule: paramPort
+    - default: /
+      edit: true
+      envKey: NAPCAT_PREFIX
+      labelEn: NAPCAT_PREFIX
+      labelZh: WebUI工作前缀
+      required: false
+      type: text
+    - default: napcat
+      edit: true
+      envKey: NAPCAT_TOKEN
+      labelEn: NAPCAT_TOKEN
+      labelZh: 登录密钥(留空随机生成)
+      required: false
+      type: text
+    - default: 3
+      edit: true
+      envKey: NAPCAT_LOGINRATE
+      labelEn: NAPCAT_LOGINRATE
+      labelZh: 每分钟登录次数限制
+      required: true
+      type: number
+    - default: 02:42:ac:11:00:99
+      edit: true
+      envKey: MAC_ADDRESS
+      labelEn: mac_address
+      labelZh: mac地址
+      required: false
+      type: text
+    - default: 0
+      edit: true
+      envKey: NAPCAT_UID
+      labelEn: NAPCAT_UID
+      labelZh: NAPCAT用户ID
+      required: true
+      type: number
+    - default: 0
+      edit: true
+      envKey: NAPCAT_GID
+      labelEn: NAPCAT_GID
+      labelZh: NAPCAT组ID
+      required: true
+      type: number
+    - default: ./data/QQ
+      edit: true
+      envKey: QQ_PATH
+      labelEn: QQ_setting_path
+      labelZh: QQ配置路径
+      required: false
+      type: text
+    - default: ./data
+      edit: true
+      envKey: CONFIG_PATH
+      labelEn: NapCat_config_path
+      labelZh: NapCat配置路径
+      required: true
+      type: text
+    - default: ./data/log
+      edit: true
+      envKey: LOG_PATH
+      labelEn: NapCat_log_path
+      labelZh: NapCat日志路径
+      required: false
+      type: text
