@@ -15,7 +15,7 @@
 bash <(wget -qO- https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
 ```
 ```shell
-bash <(curl -sS- https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
+bash <(curl -sS https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
 ```
 然后应用商店刷新本地应用即可。
 
