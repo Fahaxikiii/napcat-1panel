@@ -8,17 +8,24 @@
 
 ## 使用方式
 
-默认`1Panel`安装在`/opt/`路径下，如果不是按需修改以下。
-
 #### 1 使用 git 命令获取应用
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-git clone https://github.com/Fahaxikiii/napcat-1panel /opt/1panel/resource/apps/local/napcat-1panel
+#!/bin/sh
 
-cp -rf /opt/1panel/resource/apps/local/napcat-1panel/napcat /opt/1panel/resource/apps/local/
+install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
 
-rm -rf /opt/1panel/resource/apps/local/napcat-1panel
+git clone -b napcat https://github.com/Fahaxikiii/napcat-1panel.git "$install_dir/1panel/resource/apps/local/napcat-temp"
+
+if [ $? -eq 0 ]; then
+    rm -rf $install_dir/1panel/resource/apps/local/napcat
+    mv $install_dir/1panel/resource/apps/local/napcat-temp $install_dir/1panel/resource/apps/local/napcat
+else
+    echo "克隆失败"
+    exit 1
+fi
+
 ```
 
 然后应用商店刷新本地应用即可。
