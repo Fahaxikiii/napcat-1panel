@@ -1,7 +1,7 @@
 # NapCat-1Panel
 在1Panel面板运行NapCat
 <div align="center">
-  <img src="https://cdn.wanli.icu/Snipaste_2024-09-10_01-20-13.png?e=1725903007&token=-OaWqvhw6VUi5aqDe_VjvExatymWXEXdbBlMTPpr:MbBgBuSCERuvm5sm9kW6JL2BzlE="/>
+  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/1.png"/>
 </div>
 
 ---
@@ -34,5 +34,5 @@ bash <(curl -sS https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fah
 ---
 ## 配置图
 <div align="center">
-  <img src="https://cdn.wanli.icu/Snipaste_2024-09-10_01-20-31.png?e=1725903211&token=-OaWqvhw6VUi5aqDe_VjvExatymWXEXdbBlMTPpr:PllZcPZYWiW14j4hwPF66eg5D7M="/>
+  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/2.png"/>
 </div>
