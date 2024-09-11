@@ -1,0 +1,57 @@
+name: Monitor Docker Tag and Rename Folder
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # 每30分钟运行一次
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  check-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker CLI
+        uses: docker/setup-buildx-action@v2
+
+      - name: Get latest Docker tag
+        id: get_tag
+        run: |
+          TAG=$(curl -s "https://hub.docker.com/v2/repositories/mlikiowa/napcat-docker/tags/?page_size=100" | jq -r '.results[1].name' | awk '{sub(/^v/, ""); print}')
+          echo "latest_tag=$TAG" >> $GITHUB_ENV
+
+      - name: Check if tag has changed
+        id: check_tag
+        run: |
+          if [ -f ".latest_tag" ]; then
+            PREVIOUS_TAG=$(cat .latest_tag)
+          else
+            PREVIOUS_TAG=""
+          fi
+
+          if [ "$latest_tag" != "$PREVIOUS_TAG" ]; then
+            echo "Tag has changed from $PREVIOUS_TAG to $latest_tag"
+            echo "$latest_tag" > .latest_tag
+            echo "needs_update=true" >> $GITHUB_ENV
+          else
+            echo "Tag has not changed"
+            echo "needs_update=false" >> $GITHUB_ENV
+          fi
+
+      - name: Rename folder if needed
+        if: env.needs_update == 'true'
+        run: |
+          FOLDER_NAME="folder_name_$latest_tag"
+          mv folder_name $FOLDER_NAME
+          echo "Folder renamed to $FOLDER_NAME"
+
+      - name: Commit changes
+        if: env.needs_update == 'true'
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add .
+          git commit -m "Renamed folder to $FOLDER_NAME"
+          git push
