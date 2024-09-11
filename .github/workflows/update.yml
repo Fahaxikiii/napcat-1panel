@@ -1,9 +1,9 @@
 name: Monitor Docker Tag and Rename Folder
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'  # 每30分钟运行一次
-  workflow_dispatch:  # 手动触发
+    - cron: 0 * * * *
   push:
     branches:
       - napcat  # 触发工作流的分支
