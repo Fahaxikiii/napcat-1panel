@@ -1,7 +1,7 @@
 # NapCat-1Panel
 在1Panel面板运行NapCat
-<div style="display: flex; align-items: center; justify-content: center;">
-  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/logo.png" alt="Image 1" style="height: 200px; object-fit: cover; display: block; margin-right: 10px;" /><img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/1.png" alt="Image 2" style="height: 200px; object-fit: cover; display: block;" />
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/1.png"/>
 </div>
 
 ---
