@@ -22,21 +22,22 @@ jobs:
 
       - name: Check current directory contents
         run: |
+          git clone -b https://github.com/Fahaxikiii/napcat-1panel.git /home/runner/work/napcat-1panel/napcat
           echo "Current directory contents:"
-          ls -la /home/runner/work/napcat-1panel/napcat-1panel
+          ls -la /home/runner/work/napcat-1panel/napcat
 
       - name: Get current folder name
         id: get_current_folder
         run: |
-          current_folder=$(ls /home/runner/work/napcat-1panel/napcat-1panel | head -n 1)
+          current_folder=$(ls /home/runner/work/napcat-1panel/napcat | head -n 1)
           echo "Current folder name: $current_folder"
           echo "current_folder_name=$current_folder" >> $GITHUB_ENV
 
       - name: Compare and rename folder
         if: ${{ env.current_folder_name != env.tag }}
         run: |
-          current_folder="/home/runner/work/napcat-1panel/napcat-1panel/${{ env.current_folder_name }}"
-          target_folder="/home/runner/work/napcat-1panel/napcat-1panel/${{ env.tag }}"
+          current_folder="/home/runner/work/napcat-1panel/napcat/${{ env.current_folder_name }}"
+          target_folder="/home/runner/work/napcat-1panel/napcat/${{ env.tag }}"
           
           echo "Current folder path: $current_folder"
           echo "Target folder path: $target_folder"
