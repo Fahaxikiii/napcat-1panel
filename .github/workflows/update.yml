@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: napcat
 
       - name: Get Docker tag
         id: get_docker_tag
@@ -20,8 +24,6 @@ jobs:
 
       - name: Check current directory contents
         run: |
-          git checkout napcat
-          git pull origin napcat
           echo "Current directory contents:"
           ls -la /home/runner/work/napcat-1panel/napcat-1panel
 
