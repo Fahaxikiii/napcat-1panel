@@ -8,7 +8,7 @@ git clone -b napcat https://github.com/Fahaxikiii/napcat-1panel.git "$install_di
 
 if [ $? -eq 0 ]; then
     rm -rf $install_dir/1panel/resource/apps/local/napcat
-    mv $install_dir/1panel/resource/apps/local/napcat-temp $install_dir/1panel/resource/apps/local/napcat
+    mv $install_dir/1panel/resource/apps/local/napcat-1panel-napcat $install_dir/1panel/resource/apps/local/napcat
 else
     exit 1
 fi
