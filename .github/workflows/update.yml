@@ -2,8 +2,6 @@ name: Monitor Docker Tag and Rename Folder
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: 0 0/1 * * *
     
 env:
   TZ: Asia/Shanghai
