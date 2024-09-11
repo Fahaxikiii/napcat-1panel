@@ -1,7 +1,7 @@
 # NapCat-1Panel
 在1Panel面板运行NapCat
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/1.png"/>
+  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/1.jpeg"/>
 </div>
 
 ---
