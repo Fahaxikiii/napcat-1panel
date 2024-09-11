@@ -47,6 +47,8 @@ jobs:
           if [ -d "$current_folder" ]; then
             echo "Renaming folder."
             mv "$current_folder" "$target_folder"
+            git config --global user.email "920113370213@njust.edu.cn"
+            git config --global user.name "Fahaxikiii"
             git add .
             git commit -m "Rename folder from ${current_folder_name} to ${TAG}"
             git push origin napcat
