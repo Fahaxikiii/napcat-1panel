@@ -9,8 +9,8 @@ additionalProperties:
       type: text
     - default: 0.0.0.0
       edit: true
-      envKey: NAPCAT_HOST
-      labelEn: NAPCAT_HOST
+      envKey: WEBUI_HOST
+      labelEn: WEBUI_HOST
       labelZh: WebUI监听地址
       required: true
       type: text
@@ -24,22 +24,22 @@ additionalProperties:
       rule: paramPort
     - default: /
       edit: true
-      envKey: NAPCAT_PREFIX
-      labelEn: NAPCAT_PREFIX
+      envKey: WEBUI_PREFIX
+      labelEn: WEBUI_PREFIX
       labelZh: WebUI工作前缀
       required: false
       type: text
     - default: napcat
       edit: true
-      envKey: NAPCAT_TOKEN
-      labelEn: NAPCAT_TOKEN
+      envKey: WEBUI_TOKEN
+      labelEn: WEBUI_TOKEN
       labelZh: 登录密钥(留空随机生成)
       required: false
       type: text
     - default: 3
       edit: true
-      envKey: NAPCAT_LOGINRATE
-      labelEn: NAPCAT_LOGINRATE
+      envKey: WEBUI_LOGIN_RATE
+      labelEn: WEBUI_LOGIN_RATE
       labelZh: 每分钟登录次数限制
       required: true
       type: number

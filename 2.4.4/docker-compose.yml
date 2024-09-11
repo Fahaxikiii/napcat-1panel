@@ -9,7 +9,13 @@ services:
             - "NAPCAT_UID=${NAPCAT_UID}"
             - "NAPCAT_GID=${NAPCAT_GID}"
             - "ACCOUNT=${QQ_ACCOUNT}"
+            - "WEBUI_HOST=${WEBUI_HOST}"
+            - "WEBUI_PORT=${PANEL_APP_PORT_HTTP}"
+            - "WEBUI_PREFIX=${WEBUI_PREFIX}"
+            - "WEBUI_TOKEN=${WEBUI_TOKEN}"
+            - "WEBUI_LOGIN_RATE=${WEBUI_LOGIN_RATE}"
         volumes:
+            - "./scripts/entrypoint.sh:/app/entrypoint.sh"
             - "${QQ_PATH}:/app/.config/QQ"
             - "${CONFIG_PATH}:/app/napcat/config"
             - "${LOG_PATH}:/app/napcat/logs"

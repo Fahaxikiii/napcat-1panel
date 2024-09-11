@@ -1,0 +1,114 @@
+#!/bin/bash
+
+chech_quotes(){
+    local input="$1"
+    if [ "${input:0:1}" != '"' ] ; then
+        if [ "${input:0:1}" != '[' ] ; then
+            input="[\"$input\"]"
+        fi
+    else
+        input="[$input]"
+    fi
+    echo $input
+}
+
+# 安装 napcat
+if [ ! -f "napcat/napcat.mjs" ]; then
+    unzip -q NapCat.Shell.zip -d ./NapCat.Shell
+    mv NapCat.Shell/config/* napcat/config/ && rmdir NapCat.Shell/config
+    mv NapCat.Shell/* napcat/
+fi
+
+CONFIG_PATH=napcat/config/onebot11_$ACCOUNT.json
+# 容器首次启动时执行
+if [ ! -f "$CONFIG_PATH" ]; then
+    : ${WEBUI_HOST:="0.0.0.0"}
+    : ${WEBUI_PORT:=6099}
+    : ${WEBUI_PREFIX:=""}
+    : ${WEBUI_TOKEN:=""}
+    : ${WEBUI_LOGIN_RATE:=3}
+    : ${HTTP_PORT:=3000}
+    : ${HTTP_URLS:='[]'}
+    : ${WS_PORT:=3001}
+    : ${HTTP_ENABLE:='false'}
+    : ${HTTP_POST_ENABLE:='false'}
+    : ${WS_ENABLE:='false'}
+    : ${WSR_ENABLE:='false'}
+    : ${WS_URLS:='[]'}
+    : ${HEART_INTERVAL:=60000}
+    : ${TOKEN:=''}
+    : ${F2U_ENABLE:='false'}
+    : ${DEBUG_ENABLE:='false'}
+    : ${LOG_ENABLE:='false'}
+    : ${RSM_ENABLE:='false'}
+    : ${MESSAGE_POST_FORMAT:='array'}
+    : ${HTTP_HOST:=''}
+    : ${WS_HOST:=''}
+    : ${HTTP_HEART_ENABLE:='false'}
+    : ${MUSIC_SIGN_URL:=''}
+    : ${HTTP_SECRET:=''}
+    : ${NAPCAT_GID:=1001}
+    : ${NAPCAT_UID:=911}
+    HTTP_URLS=$(chech_quotes $HTTP_URLS)
+    WS_URLS=$(chech_quotes $WS_URLS)
+cat <<EOF > $CONFIG_PATH
+{
+    "http": {
+      "enable": ${HTTP_ENABLE},
+      "host": "$HTTP_HOST",
+      "port": ${HTTP_PORT},
+      "secret": "$HTTP_SECRET",
+      "enableHeart": ${HTTP_HEART_ENABLE},
+      "enablePost": ${HTTP_POST_ENABLE},
+      "postUrls": $HTTP_URLS
+    },
+    "ws": {
+      "enable": ${WS_ENABLE},
+      "host": "${WS_HOST}",
+      "port": ${WS_PORT}
+    },
+    "reverseWs": {
+      "enable": ${WSR_ENABLE},
+      "urls": $WS_URLS
+    },
+    "GroupLocalTime":{
+      "Record": false,
+      "RecordList": []
+    },
+    "debug": ${DEBUG_ENABLE},
+    "heartInterval": ${HEART_INTERVAL},
+    "messagePostFormat": "$MESSAGE_POST_FORMAT",
+    "enableLocalFile2Url": ${F2U_ENABLE},
+    "musicSignUrl": "$MUSIC_SIGN_URL",
+    "reportSelfMessage": ${RSM_ENABLE},
+    "token": "$TOKEN"
+}
+EOF
+fi
+
+WEBUI_PATH="napcat/config/webui.json"
+if [ "$WEBUI_HOST" ] || [ "$WEBUI_PORT" ] || [ "$WEBUI_PREFIX" ] || [ "$WEBUI_TOKEN" ] || [ "$WEBUI_LOGIN_RATE" ]; then
+cat <<EOF > "$WEBUI_PATH"
+{
+    "host": "$WEBUI_HOST",
+    "port": $WEBUI_PORT,
+    "prefix": "$WEBUI_PREFIX",
+    "token": "$WEBUI_TOKEN",
+    "loginRate": $WEBUI_LOGIN_RATE
+}
+EOF
+fi
+
+rm -rf "/tmp/.X1-lock"
+
+usermod -o -u ${NAPCAT_UID} napcat
+groupmod -o -g ${NAPCAT_GID} napcat
+usermod -g ${NAPCAT_GID} napcat
+chown -R ${NAPCAT_UID}:${NAPCAT_GID} /app
+
+gosu napcat Xvfb :1 -screen 0 1080x760x16 +extension GLX +render &
+sleep 2
+export FFMPEG_PATH=/usr/bin/ffmpeg
+export DISPLAY=:1
+cd /app/napcat
+gosu napcat /opt/QQ/qq --no-sandbox -q $ACCOUNT
