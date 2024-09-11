@@ -5,17 +5,17 @@ additionalProperties:
       envKey: QQ_ACCOUNT
       labelEn: QQ_ACCOUNT
       labelZh: 机器人账号
-      required: false
+      required: true
       type: text
     - default: 0.0.0.0
-      edit: true
+      edit: false
       envKey: WEBUI_HOST
       labelEn: WEBUI_HOST
       labelZh: WebUI监听地址
       required: true
       type: text
     - default: 6099
-      edit: true
+      edit: false
       envKey: PANEL_APP_PORT_HTTP
       labelEn: NAPCAT_PORT
       labelZh: WebUI端口
@@ -23,31 +23,31 @@ additionalProperties:
       type: number
       rule: paramPort
     - default: /
-      edit: true
+      edit: false
       envKey: WEBUI_PREFIX
       labelEn: WEBUI_PREFIX
       labelZh: WebUI工作前缀
       required: false
       type: text
     - default: napcat
-      edit: true
+      edit: false
       envKey: WEBUI_TOKEN
       labelEn: WEBUI_TOKEN
       labelZh: 登录密钥(留空随机生成)
-      required: false
+      required: true
       type: text
     - default: 3
-      edit: true
+      edit: false
       envKey: WEBUI_LOGIN_RATE
       labelEn: WEBUI_LOGIN_RATE
       labelZh: 每分钟登录次数限制
       required: true
       type: number
-    - default: 02:42:ac:11:00:99
+    - default: 00:e0:70:9a:5d:2b
       edit: true
       envKey: MAC_ADDRESS
       labelEn: mac_address
-      labelZh: mac地址
+      labelZh: mac地址(请修改成你自己的)
       required: false
       type: text
     - default: 0
@@ -64,19 +64,19 @@ additionalProperties:
       labelZh: NAPCAT组ID
       required: true
       type: number
-    - default: ./data/QQ
-      edit: true
-      envKey: QQ_PATH
-      labelEn: QQ_setting_path
-      labelZh: QQ配置路径
-      required: false
-      type: text
     - default: ./data
       edit: true
       envKey: CONFIG_PATH
       labelEn: NapCat_config_path
       labelZh: NapCat配置路径
       required: true
+      type: text
+    - default: ./data/QQ
+      edit: true
+      envKey: QQ_PATH
+      labelEn: QQ_setting_path
+      labelZh: QQ配置路径
+      required: false
       type: text
     - default: ./data/log
       edit: true
