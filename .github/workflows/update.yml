@@ -23,22 +23,39 @@ jobs:
           echo "Docker tag: $tag"
           echo "tag=$tag" >> $GITHUB_ENV
 
+      - name: Check current directory contents
+        run: |
+          echo "Current directory contents:"
+          ls -la /home/runner/work/napcat-1panel/napcat-1panel
+
       - name: Get current folder name
         id: get_current_folder
         run: |
-          folder_name=$(ls napcat | head -n 1)
-          echo "Current folder name: $folder_name"
-          echo "current_folder_name=$folder_name" >> $GITHUB_ENV
+          current_folder=$(ls /home/runner/work/napcat-1panel/napcat-1panel | head -n 1)
+          echo "Current folder name: $current_folder"
+          echo "current_folder_name=$current_folder" >> $GITHUB_ENV
 
-      - name: Compare and update folder name
+      - name: Compare and rename folder
         if: ${{ env.current_folder_name != env.tag }}
         run: |
-          echo "Folder needs to be updated."
-          mv "napcat/${{ env.current_folder_name }}" "napcat/${{ env.tag }}"
-          git add napcat
-          git commit -m "Update folder name to ${TAG}"
-          git push origin napcat
+          current_folder="/home/runner/work/napcat-1panel/napcat-1panel/${{ env.current_folder_name }}"
+          target_folder="/home/runner/work/napcat-1panel/napcat-1panel/${{ env.tag }}"
+          
+          echo "Current folder path: $current_folder"
+          echo "Target folder path: $target_folder"
 
-      - name: Notify if no update needed
+          if [ -d "$current_folder" ]; then
+            echo "Renaming folder."
+            mv "$current_folder" "$target_folder"
+            git add .
+            git commit -m "Rename folder from ${current_folder_name} to ${TAG}"
+            git push origin napcat
+          else
+            echo "Source folder '$current_folder' does not exist."
+            exit 1
+          fi
+
+      - name: Notify if no rename needed
         if: ${{ env.current_folder_name == env.tag }}
-        run: echo "No folder update needed. Current folder name is already ${TAG}"
+        run: echo "No folder rename needed. Current folder name is already ${TAG}"
+
