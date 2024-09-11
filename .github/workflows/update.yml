@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: 0 * * * *
-  push:
-    branches:
-      - napcat  # 触发工作流的分支
 
 jobs:
   update-folder:
