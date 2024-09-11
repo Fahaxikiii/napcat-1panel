@@ -22,6 +22,7 @@ jobs:
 
       - name: Check current directory contents
         run: |
+          mkdir -p /home/runner/work/napcat-1panel/napcat
           git clone -b https://github.com/Fahaxikiii/napcat-1panel.git /home/runner/work/napcat-1panel/napcat
           echo "Current directory contents:"
           ls -la /home/runner/work/napcat-1panel/napcat
