@@ -23,15 +23,10 @@ bash <(curl -sS https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fah
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-wget -P /opt/1panel/resource/apps/local https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/main.zip
-
-unzip -o -d /opt/1panel/resource/apps/local/ /opt/1panel/resource/apps/local/main.zip
-
-cp -rf /opt/1panel/resource/apps/local/napcat-1panel-main/napcat /opt/1panel/resource/apps/local/
-
-rm -rf /opt/1panel/resource/apps/local/napcat-1panel-main
-
-rm -rf /opt/1panel/resource/apps/local/main.zip
+bash <(wget -qO- https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/archiveproxy.sh)
+```
+```shell
+bash <(curl -sS https://mirror.ghproxy.com/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/archiveproxy.sh)
 ```
 
 然后应用商店刷新本地应用即可。
