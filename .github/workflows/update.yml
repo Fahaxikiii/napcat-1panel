@@ -30,7 +30,7 @@ jobs:
       - name: Get current folder name
         id: get_current_folder
         run: |
-          current_folder=$(ls /home/runner/work/napcat-1panel/napcat-1panel | head -n 1)
+          current_folder=$(basename $(ls -d /root/napcat-1panel/*/ | head -n 1))
           echo "Current folder name: $current_folder"
           echo "current_folder_name=$current_folder" >> $GITHUB_ENV
 
