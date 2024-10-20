@@ -22,7 +22,7 @@ additionalProperties:
       required: true
       type: number
       rule: paramPort
-    - default: /
+    - default: ''
       edit: false
       envKey: WEBUI_PREFIX
       labelEn: WEBUI_PREFIX
@@ -83,5 +83,38 @@ additionalProperties:
       envKey: LOG_PATH
       labelEn: NapCat_log_path
       labelZh: NapCat日志路径
+      required: true
+      type: text
+    - default: ''
+      edit: true
+      envKey: ADDITIONAL_PATH1
+      labelEn: ADDITIONAL_PATH
+      labelZh: 需要添加的额外路径
       required: false
       type: text
+    - default: ''
+      edit: true
+      envKey: ADDITIONAL_PATH2
+      labelEn: ADDITIONAL_PATH
+      labelZh: 需要添加的额外路径
+      required: false
+      type: text
+    - default: ''
+      edit: true
+      envKey: ADDITIONAL_PATH3
+      labelEn: ADDITIONAL_PATH
+      labelZh: 需要添加的额外路径
+      required: false
+      type: text
+    - default: /dev/null
+      edit: true
+      envKey: ENABLE_STATIC
+      labelEn: ENABLE_STATIC
+      labelZh: 映射webui静态文件目录(需要自己添加)
+      required: true
+      type: select
+      values:
+        - label: "True"
+          value: "${CONFIG_PATH}/static"
+        - label: "False"
+          value: "/dev/null"
