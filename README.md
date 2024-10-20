@@ -31,6 +31,10 @@ bash <(curl -sS https://ghp.ci/https://raw.githubusercontent.com/Fahaxikiii/napc
 
 然后应用商店刷新本地应用即可。
 
+你或许可以使用以下命令获取MAC_ADDRESS
+```shell
+ip addr show $(ip route | awk '/default/ {print $5}') | grep link/ether | awk '{print $2}'
+```
 ---
 ## 配置图
 <div align="center">
