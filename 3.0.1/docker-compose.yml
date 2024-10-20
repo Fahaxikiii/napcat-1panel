@@ -21,3 +21,4 @@ services:
         image: mlikiowa/napcat-docker:latest
         labels:
             createdBy: "Apps"
+

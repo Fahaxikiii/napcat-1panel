@@ -126,3 +126,4 @@ additionalProperties:
           value: "${CONFIG_PATH}/static"
         - label: "False"
           value: "/dev/null"
+          
