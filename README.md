@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://socialify.git.ci/NapNeko/NapCatQQ/image?description=1&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FNapNeko%2FNapCatQQ%2Fmain%2Flogo.png&name=1&stargazers=1&theme=Auto" alt="NapCatQQ" width="640" height="320" />
+  <img src="https://socialify.git.ci/NapNeko/NapCatQQ/image?font=Jost&logo=https%3A%2F%2Fnapneko.github.io%2Fassets%2Flogo.png&name=1&owner=1&pattern=Diagonal%20Stripes&stargazers=1&theme=Auto" alt="NapCatQQ" width="640" height="320" />
 </div>
 
 ---
@@ -7,20 +7,29 @@
 NapCatQQ (aka 猫猫框架) 是现代化的基于 NTQQ 的 Bot 协议端实现
 
 ## 猫猫技能
-- [x] **高性能**：1K+ 群聊数目、20 线程并行发送消息毫无压力 
-- [x] **多种启动方式**：支持以无头、LiteLoader 插件、仅 QQ GUI 三种方式启动
-- [x] **多平台支持**: 覆盖 Windows / Linux (可选 Docker) / Android Termux / MacOS
+- [x] **超高性能**：轻松数千群聊 独创消息队列
+- [x] **启动方式**：支持以无头、LiteLoader 插件、仅 QQ GUI 三种方式启动
+- [x] **覆盖平台**: 覆盖 Windows / Linux (可选 Docker) / Android Termux / MacOS
 - [x] **安装简单**: 支持一键脚本/程序自动部署/镜像部署等多种覆盖范围
-- [x] **低占用**：无头模式占用资源极低，适合在服务器上运行
+- [x] **超低占用**：无头模式占用资源极低，适合在服务器上运行
 - [x] **超多接口**：实现大部分 OneBot 和 go-cqhttp 接口，超多扩展 API
-- [x] **WebUI**：自带 WebUI 支持，远程管理更加便捷
-- [x] **低故障率**：快速适配最新版本，日常保证 0 Issue
+- [x] **远程管理**：自带 WebUI 支持，远程管理更加便捷
+- [x] **扩展支持**：基于 MoeHoo 的Native 可实现发包与收包
 
 ## 使用猫猫
 
 可前往 [Release](https://github.com/NapNeko/NapCatQQ/releases/) 页面下载最新版本
 
-**首次使用**请务必前往[官方文档](https://napneko.github.io/)查看使用教程
+**首次使用**请务必查看如下文档看使用教程
+
+### 文档地址
+[Github.IO](https://napneko.github.io/)
+
+[Cloudflare.Worker](https://doc.napneko.icu/)
+
+[Cloudflare.HKServer](https://napcat.napneko.icu/)
+
+[Cloudflare.Pages](https://napneko.pages.dev/)
 
 ## 回家旅途
 [QQ Group](https://qm.qq.com/q/VfjAq5HIMS)
@@ -28,7 +37,7 @@ NapCatQQ (aka 猫猫框架) 是现代化的基于 NTQQ 的 Bot 协议端实现
 [Telegram Link](https://t.me/+nLZEnpne-pQ1OWFl)
 
 ## 猫猫朋友
-感谢 [LLOneBot](https://github.com/LLOneBot/LLOneBot) 提供部分参考
+感谢 [LLOneBot](https://github.com/LLOneBot/LLOneBot)
 
 感谢 [Lagrange](https://github.com/LagrangeDev/Lagrange.Core) 对本项目的大力支持
 
