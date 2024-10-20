@@ -17,3 +17,10 @@ PACKET_PATH="${CONFIG_PATH}/config.json"
 cat <<EOF > "$PACKET_PATH"
 {"ip": "127.0.0.1", "port": ${PACKET_PORT}}
 EOF
+{
+  "fileLog": true,
+  "consoleLog": true,
+  "fileLogLevel": "debug",
+  "consoleLogLevel": "info",
+  "packetServer": "127.0.0.1:${PACKET_PORT}"
+}
