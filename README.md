@@ -1,7 +1,7 @@
 # NapCat-1Panel
 在1Panel面板运行NapCat
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/1.jpeg"/>
+  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/logo.jpeg"/>
 </div>
 
 ---
@@ -38,5 +38,5 @@ ip addr show $(ip route | awk '/default/ {print $5}') | grep link/ether | awk '{
 ---
 ## 配置图
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/2.png"/>
+  <img src="https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/config.jpeg"/>
 </div>
