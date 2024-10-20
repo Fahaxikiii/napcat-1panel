@@ -13,3 +13,7 @@ cat <<EOF > "$WEBUI_PATH"
     "loginRate": ${WEBUI_LOGIN_RATE}
 }
 EOF
+PACKET_PATH="${CONFIG_PATH}/config.json"
+cat <<EOF > "$PACKET_PATH"
+{"ip": "127.0.0.1", "port": ${PACKET_PORT}}
+EOF

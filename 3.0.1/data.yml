@@ -22,6 +22,14 @@ additionalProperties:
       required: true
       type: number
       rule: paramPort
+    - default: 8086
+      edit: false
+      envKey: PACKET_PORT
+      labelEn: PACKET_PORT
+      labelZh: PACKET端口
+      required: true
+      type: number
+      rule: paramPort
     - default: ''
       edit: false
       envKey: WEBUI_PREFIX
