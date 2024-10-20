@@ -17,6 +17,7 @@ services:
             - "${ADDITIONAL_PATH1:-/dev/null}:${ADDITIONAL_PATH1:-/app/zero}"
             - "${ADDITIONAL_PATH2:-/dev/null}:${ADDITIONAL_PATH2:-/app/zero}"
             - "${ADDITIONAL_PATH3:-/dev/null}:${ADDITIONAL_PATH3:-/app/zero}"
+            - "${ENABLE_STATIC}"
         image: mlikiowa/napcat-docker:latest
         labels:
             createdBy: "Apps"
