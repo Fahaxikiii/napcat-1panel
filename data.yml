@@ -8,6 +8,6 @@ additionalProperties:
   type: tool
   crossVersionUpdate: true
   limit: 0
-  website: https://napneko.github.io/zh-CN/
+  website: https://napcat.napneko.icu/
   github: https://github.com/NapNeko/NapCatQQ
-  document: https://napneko.github.io/zh-CN/guide/getting-started
+  document: https://doc.napneko.icu/
