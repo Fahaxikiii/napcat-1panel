@@ -2,7 +2,7 @@ name: Monitor Docker Tag and Rename Folder
 
 on:
   schedule:
-    - cron:  '*/10 * * * *'
+    - cron:  '0 */1 * * *'
   workflow_dispatch:
 
 jobs:
