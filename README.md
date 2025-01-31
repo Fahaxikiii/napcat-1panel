@@ -1,7 +1,7 @@
 # NapCat-1Panel
 在1Panel面板运行NapCat
 <div align="center">
-  <img src="https://www.ghproxy.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/logo.jpeg"/>
+  <img src="https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/logo.jpeg"/>
 </div>
 
 ---
@@ -12,10 +12,10 @@
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-bash <(wget -qO- https://www.ghproxy.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
+bash <(wget -qO- https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
 ```
 ```shell
-bash <(curl -sS https://www.ghproxy.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
+bash <(curl -sS https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
 ```
 然后应用商店刷新本地应用即可。
 
@@ -23,10 +23,10 @@ bash <(curl -sS https://www.ghproxy.cn/https://raw.githubusercontent.com/Fahaxik
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-bash <(wget -qO- https://www.ghproxy.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/archiveproxy.sh)
+bash <(wget -qO- https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/archiveproxy.sh)
 ```
 ```shell
-bash <(curl -sS https://www.ghproxy.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/archiveproxy.sh)
+bash <(curl -sS https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/archiveproxy.sh)
 ```
 
 然后应用商店刷新本地应用即可。
@@ -38,5 +38,5 @@ ip addr show $(ip route | awk '/default/ {print $5}') | grep link/ether | awk '{
 ---
 ## 配置图
 <div align="center">
-  <img src="https://www.ghproxy.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/config.jpeg"/>
+  <img src="https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/config.jpeg"/>
 </div>
