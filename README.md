@@ -69,7 +69,7 @@ bash <(curl -sS https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii
 
 然后应用商店刷新本地应用即可。
 
-你或许可以使用以下命令获取MAC_ADDRESS
+或许你可以使用以下命令在终端获取MAC_ADDRESS
 ```shell
 ip addr show $(ip route | awk '/default/ {print $5}') | grep link/ether | awk '{print $2}'
 ```
