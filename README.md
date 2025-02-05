@@ -69,14 +69,18 @@ rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat
 
 if command -v wget > /dev/null; then
     wget -O $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
-else
+elseif command -v curl > /dev/null; then
     curl -o $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
+else
+    echo "请先安装wget或curl"
+    exit 1
 fi
 
 unzip "$install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip" -d "$install_dir/1panel/resource/apps/local/"
 rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip
 rm -rf $install_dir/1panel/resource/apps/local/napcat
 mv $install_dir/1panel/resource/apps/local/napcat-1panel-napcat $install_dir/1panel/resource/apps/local/napcat
+echo "success"
 ```
 ```shell
 #!/bin/sh
@@ -87,14 +91,18 @@ rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat
 
 if command -v wget > /dev/null; then
     wget -O $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://gh.spoli.cn/https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
-else
+elseif command -v curl > /dev/null; then
     curl -o $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://gh.spoli.cn/https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
+else
+    echo "请先安装wget或curl"
+    exit 1
 fi
 
 unzip "$install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip" -d "$install_dir/1panel/resource/apps/local/"
 rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip
 rm -rf $install_dir/1panel/resource/apps/local/napcat
 mv $install_dir/1panel/resource/apps/local/napcat-1panel-napcat $install_dir/1panel/resource/apps/local/napcat
+echo "success"
 ```
 
 然后应用商店刷新本地应用即可。
