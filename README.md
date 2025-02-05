@@ -29,7 +29,9 @@ git clone -b napcat https://github.com/Fahaxikiii/napcat-1panel.git "$install_di
 if [ $? -eq 0 ]; then
     rm -rf $install_dir/1panel/resource/apps/local/napcat
     mv $install_dir/1panel/resource/apps/local/napcat-1panel-napcat $install_dir/1panel/resource/apps/local/napcat
+    echo "success"
 else
+    echo "error"
     exit 1
 fi
 ```
@@ -46,7 +48,9 @@ git clone -b napcat https://gh.spoli.cn/https://github.com/Fahaxikiii/napcat-1pa
 if [ $? -eq 0 ]; then
     rm -rf $install_dir/1panel/resource/apps/local/napcat
     mv $install_dir/1panel/resource/apps/local/napcat-1panel-napcat $install_dir/1panel/resource/apps/local/napcat
+    echo "success"
 else
+    echo "error"
     exit 1
 fi
 ```
