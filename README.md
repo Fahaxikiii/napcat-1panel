@@ -9,8 +9,8 @@
 ## 使用方式
 
 github代理地址
-| 自建 | https://gh.spoli.cn/ |
-| 网络 | https://ghproxy.link/ |
+- 自建 : https://gh.spoli.cn/ 
+- 网络 : https://ghproxy.link/
 
 
 ### 1 使用 git 命令获取应用
