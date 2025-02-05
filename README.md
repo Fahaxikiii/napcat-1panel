@@ -61,10 +61,40 @@ fi
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-bash <(wget -qO- https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/archiveproxy.sh)
+#!/bin/sh
+
+install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
+
+rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat
+
+if command -v wget > /dev/null; then
+    wget -O $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
+else
+    curl -o $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
+fi
+
+unzip $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip
+rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip
+rm -rf $install_dir/1panel/resource/apps/local/napcat
+mv $install_dir/1panel/resource/apps/local/napcat-1panel-napcat $install_dir/1panel/resource/apps/local/napcat
 ```
 ```shell
-bash <(curl -sS https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/archiveproxy.sh)
+#!/bin/sh
+
+install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
+
+rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat
+
+if command -v wget > /dev/null; then
+    wget -O $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
+else
+    curl -o $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
+fi
+
+unzip $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip
+rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip
+rm -rf $install_dir/1panel/resource/apps/local/napcat
+mv $install_dir/1panel/resource/apps/local/napcat-1panel-napcat $install_dir/1panel/resource/apps/local/napcat
 ```
 
 然后应用商店刷新本地应用即可。
