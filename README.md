@@ -37,7 +37,7 @@ else
 fi
 ```
 #### 国内
-```shell
+```bash
 #!/bin/sh
 
 install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
@@ -60,7 +60,7 @@ fi
 ### 2 使用压缩包方式获取应用
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者保存为sh然后在终端运行。
-```shell
+```bash
 #!/bin/sh
 
 install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
@@ -69,7 +69,7 @@ rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat
 
 if command -v wget > /dev/null; then
     wget -O $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
-elseif command -v curl > /dev/null; then
+elif command -v curl > /dev/null; then
     curl -o $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
 else
     echo "请先安装wget或curl"
@@ -82,7 +82,7 @@ rm -rf $install_dir/1panel/resource/apps/local/napcat
 mv $install_dir/1panel/resource/apps/local/napcat-1panel-napcat $install_dir/1panel/resource/apps/local/napcat
 echo "success"
 ```
-```shell
+```bash
 #!/bin/sh
 
 install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
@@ -91,7 +91,7 @@ rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat
 
 if command -v wget > /dev/null; then
     wget -O $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://gh.spoli.cn/https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
-elseif command -v curl > /dev/null; then
+elif command -v curl > /dev/null; then
     curl -o $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://gh.spoli.cn/https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
 else
     echo "请先安装wget或curl"
