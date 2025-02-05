@@ -8,9 +8,10 @@
 
 ## 使用方式
 
-#### 1 使用 git 命令获取应用
+### 1 使用 git 命令获取应用
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者保存为sh然后在终端运行。
+#### 国外
 ```bash
 #!/bin/sh
 
@@ -27,12 +28,26 @@ else
     exit 1
 fi
 ```
+#### 国内
 ```shell
-bash <(curl -sS https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/scripts/gitproxy.sh)
+#!/bin/sh
+
+install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
+
+rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat
+
+git clone -b napcat https://gh.spoli.cn/https://github.com/Fahaxikiii/napcat-1panel.git "$install_dir/1panel/resource/apps/local/napcat-1panel-napcat"
+
+if [ $? -eq 0 ]; then
+    rm -rf $install_dir/1panel/resource/apps/local/napcat
+    mv $install_dir/1panel/resource/apps/local/napcat-1panel-napcat $install_dir/1panel/resource/apps/local/napcat
+else
+    exit 1
+fi
 ```
 然后应用商店刷新本地应用即可。
 
-#### 2 使用压缩包方式获取应用
+### 2 使用压缩包方式获取应用
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
