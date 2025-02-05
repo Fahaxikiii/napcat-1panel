@@ -11,7 +11,7 @@
 github代理地址
 - 自建 : https://gh.spoli.cn/ 
 - 网络 : https://ghproxy.link/
-
+*注意:* 失效请自行寻找代理
 
 ### 1 使用 git 命令获取应用
 
