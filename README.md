@@ -13,6 +13,9 @@ github代理地址
 - 网络 : https://ghproxy.link/
 
 *注意:* 失效请自行寻找代理
+docker镜像已添加自建代理
+如果无法拉取镜像请修改docker-compose中的hub.021212.xyz/mlikiowa/napcat-docker:latest
+修改为mlikiowa/napcat-docker:latest或者添加你的代理
 
 ### 1 使用 git 命令获取应用
 
