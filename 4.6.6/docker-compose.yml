@@ -1,5 +1,7 @@
+version: "3"
 services:
     napcat:
+        image: hub.161122.xyz/mlikiowa/napcat-docker:latest
         container_name: ${CONTAINER_NAME}
         restart: always
         network_mode: "host"
@@ -17,7 +19,5 @@ services:
             - "${ADDITIONAL_PATH1:-/dev/null}:${ADDITIONAL_PATH1:-/app/zero}"
             - "${ADDITIONAL_PATH2:-/dev/null}:${ADDITIONAL_PATH2:-/app/one}"
             - "${ADDITIONAL_PATH3:-/dev/null}:${ADDITIONAL_PATH3:-/app/two}"
-            - "${ENABLE_STATIC}"
-        image: hub.021212.xyz/mlikiowa/napcat-docker:latest
         labels:
             createdBy: "Apps"
