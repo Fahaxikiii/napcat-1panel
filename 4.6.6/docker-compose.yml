@@ -1,4 +1,3 @@
-version: "3"
 services:
     napcat:
         image: hub.161122.xyz/mlikiowa/napcat-docker:latest
