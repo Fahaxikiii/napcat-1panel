@@ -1,12 +1,5 @@
 additionalProperties:
   formFields:
-    - default: 1234567890
-      edit: true
-      envKey: QQ_ACCOUNT
-      labelEn: QQ_ACCOUNT
-      labelZh: 机器人账号
-      required: true
-      type: text
     - default: 0.0.0.0
       edit: false
       envKey: WEBUI_HOST
