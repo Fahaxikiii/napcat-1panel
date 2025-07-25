@@ -1,7 +1,7 @@
 # NapCat-1Panel
 在1Panel面板运行NapCat
 <div align="center">
-  <img src="https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/logo.jpeg"/>
+  <img src="https://gh.sakuno.top/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/logo.jpeg"/>
 </div>
 
 ---
@@ -9,12 +9,12 @@
 ## 使用方式
 
 github代理地址
-- 自建 : https://gh.spoli.cn/ 
+- 自建 : https://gh.sakuno.top/ 
 - 网络 : https://ghproxy.link/
 
 *注意:* 失效请自行寻找代理
 docker镜像已添加自建代理
-如果无法拉取镜像请修改docker-compose中的hub.021212.xyz/mlikiowa/napcat-docker:latest
+如果无法拉取镜像请修改docker-compose中的docker.sakuno.top/mlikiowa/napcat-docker:latest
 修改为mlikiowa/napcat-docker:latest或者添加你的代理
 
 ### 1 使用 git 命令获取应用
@@ -47,7 +47,7 @@ install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
 
 rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat
 
-git clone -b napcat https://gh.spoli.cn/https://github.com/Fahaxikiii/napcat-1panel.git "$install_dir/1panel/resource/apps/local/napcat-1panel-napcat"
+git clone -b napcat https://gh.sakuno.top/https://github.com/Fahaxikiii/napcat-1panel.git "$install_dir/1panel/resource/apps/local/napcat-1panel-napcat"
 
 if [ $? -eq 0 ]; then
     rm -rf $install_dir/1panel/resource/apps/local/napcat
@@ -93,9 +93,9 @@ install_dir=$(which 1pctl | xargs grep '^BASE_DIR=' | cut -d'=' -f2)
 rm -rf $install_dir/1panel/resource/apps/local/napcat-1panel-napcat
 
 if command -v wget > /dev/null; then
-    wget -O $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://gh.spoli.cn/https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
+    wget -O $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://gh.sakuno.top/https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
 elif command -v curl > /dev/null; then
-    curl -o $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://gh.spoli.cn/https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
+    curl -o $install_dir/1panel/resource/apps/local/napcat-1panel-napcat.zip https://gh.sakuno.top/https://github.com/Fahaxikiii/napcat-1panel/archive/refs/heads/napcat.zip
 else
     echo "请先安装wget或curl"
     exit 1
@@ -117,5 +117,5 @@ ip addr show $(ip route | awk '/default/ {print $5}') | grep link/ether | awk '{
 ---
 ## 配置图
 <div align="center">
-  <img src="https://gh.spoli.cn/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/config.jpeg"/>
+  <img src="https://gh.sakuno.top/https://raw.githubusercontent.com/Fahaxikiii/napcat-1panel/main/img/config.jpeg"/>
 </div>
