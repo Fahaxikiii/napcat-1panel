@@ -1,6 +1,6 @@
 services:
     napcat:
-        image: hub.161122.xyz/mlikiowa/napcat-docker:latest
+        image: docker.sakuno.top/mlikiowa/napcat-docker:latest
         container_name: ${CONTAINER_NAME}
         restart: always
         network_mode: "host"
