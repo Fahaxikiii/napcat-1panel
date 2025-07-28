@@ -40,7 +40,7 @@ additionalProperties:
       edit: true
       envKey: MAC_ADDRESS
       labelEn: mac_address
-      labelZh: mac地址(请修改成你自己的)
+      labelZh: mac地址(ip addr show $(ip route | awk '/default/ {print $5}') | grep link/ether | awk '{print $2}')
       required: false
       type: text
     - default: 0
@@ -82,20 +82,20 @@ additionalProperties:
       edit: true
       envKey: ADDITIONAL_PATH1
       labelEn: ADDITIONAL_PATH
-      labelZh: 需要添加的额外路径
+      labelZh: 需要添加的额外路径1
       required: false
       type: text
     - default: ''
       edit: true
       envKey: ADDITIONAL_PATH2
       labelEn: ADDITIONAL_PATH
-      labelZh: 需要添加的额外路径
+      labelZh: 需要添加的额外路径2
       required: false
       type: text
     - default: ''
       edit: true
       envKey: ADDITIONAL_PATH3
       labelEn: ADDITIONAL_PATH
-      labelZh: 需要添加的额外路径
+      labelZh: 需要添加的额外路径3
       required: false
       type: text
