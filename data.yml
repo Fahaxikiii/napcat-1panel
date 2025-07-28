@@ -1,20 +1,31 @@
+name: NapCatQQ
+tags:
+    - 实用工具
+title: 现代化的基于 NTQQ 的 Bot 协议端实现
+description: 现代化的基于 NTQQ 的 Bot 协议端实现
 additionalProperties:
     key: napcat
     name: NapCatQQ
-    tags:  
+    tags:
         - Tool
-	description:  
-	  en: A QQ BOT implemented based on NTQQ
-	  zh: 现代化的基于 NTQQ 的 Bot 协议端实现
-	  zh-Hant:
-	  ja:   
-	  ms: 
-	  pt-br: 
-	  ru:  
-	  ko: 
+    shortDescZh: 现代化的基于 NTQQ 的 Bot 协议端实现
+    shortDescEn: A QQ BOT implemented based on NTQQ
+    description:
+        en: A QQ BOT implemented based on NTQQ
+        ja: 最新のNTQQベースのボットプロトコル実装
+        ms: Pelaksanaan protokol Bot berasaskan NTQQ moden
+        pt-br: Implementação moderna do protocolo Bot baseado em NTQQ
+        ru: Современная реализация протокола бота на базе NTQQ
+        ko: 최신 NTQQ 기반 Bot 프로토콜 구현
+        zh-Hant: 現代化的基於 NTQQ 的 Bot 協定端實現
+        zh: 现代化的基于 NTQQ 的 Bot 协议端实现
     type: tool
-    crossVersionUpdate: true 
-    limit: 0  
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
     website: https://napcat.napneko.icu/
     github: https://github.com/NapNeko/NapCatQQ
     document: https://doc.napneko.icu/
+    architectures:
+      - amd64
+      - arm64
