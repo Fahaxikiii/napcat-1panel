@@ -1,13 +1,20 @@
 additionalProperties:
-  key: napcat
-  name: NapCatQQ
-  tags:
-    - Tool
-  shortDescZh: 现代化的基于 NTQQ 的 Bot 协议端实现
-  shortDescEn: A QQ BOT implemented based on NTQQ
-  type: tool
-  crossVersionUpdate: true
-  limit: 0
-  website: https://napcat.napneko.icu/
-  github: https://github.com/NapNeko/NapCatQQ
-  document: https://doc.napneko.icu/
+    key: napcat
+    name: NapCatQQ
+    tags:  
+        - Tool
+	description:  
+	  en: A QQ BOT implemented based on NTQQ
+	  zh: 现代化的基于 NTQQ 的 Bot 协议端实现
+	  zh-Hant:
+	  ja:   
+	  ms: 
+	  pt-br: 
+	  ru:  
+	  ko: 
+    type: tool
+    crossVersionUpdate: true 
+    limit: 0  
+    website: https://napcat.napneko.icu/
+    github: https://github.com/NapNeko/NapCatQQ
+    document: https://doc.napneko.icu/
